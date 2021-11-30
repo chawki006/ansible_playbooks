@@ -1,0 +1,14 @@
+---
+
+- name: Configure local machine
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: Install packages
+      ansible.builtin.script: setup.sh
+      args:
+        executable: /bin/bash
+    - name: Set shortcuts
+      ansible.builtin.script: 
+        cmd: set_shortcut.py code code "<Super>v" google-chrome google-chrome "<Super>c" firefox firefox "<Super>f"
+
