@@ -21,3 +21,17 @@ sudo snap install slack --classic
 sudo apt update
 sudo apt install tilda tmux apt-transport-https code htop vim nethogs git -y
 
+############### Startup applications ###############
+mkdir -p /home/chawki/.config/autostart
+echo "
+[Desktop Entry]
+Name=Slack
+Exec=slack
+Type=Application" > /home/chawki/.config/autostart/slack.desktop
+
+echo "
+[Desktop Entry]
+Name=Tilda
+Exec=tilda
+Type=Application" > /home/chawki/.config/autostart/tilda.desktop
+
