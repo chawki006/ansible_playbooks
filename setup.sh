@@ -12,12 +12,17 @@ if [[ ! "$http_size" == "$local_size" ]]; then
     echo "File doesn't exist or not downloaded correctly";
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 fi
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+if dpkg -l google-chrome-stable > /dev/null; then
+    echo "chrome already installed";
+else
+    sudo dpkg -i google-chrome-stable_current_amd64.deb;
+fi
 
 ############### Slack ###############
 sudo snap install slack --classic
 
 
+############### Linux packages ###############
 sudo apt update
 sudo apt install tilda tmux apt-transport-https code htop vim nethogs git -y
 
