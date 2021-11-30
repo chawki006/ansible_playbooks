@@ -35,3 +35,9 @@ Name=Tilda
 Exec=tilda
 Type=Application" > /home/chawki/.config/autostart/tilda.desktop
 
+echo "
+[Desktop Entry]
+Name=Torrent
+Exec=transmission-gtk
+Type=Application" > /home/chawki/.config/autostart/torrent.desktop
+
